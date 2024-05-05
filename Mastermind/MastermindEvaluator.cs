@@ -30,7 +30,7 @@ public static class MastermindEvaluator
             }
         }
 
-        // Now, check for misplaced colors
+        // Check for misplaced colors
         foreach (var color in remainingGuess)
         {
             if (remainingSecret.Contains(color))
