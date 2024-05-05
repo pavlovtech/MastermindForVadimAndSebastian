@@ -55,9 +55,9 @@ public class MastermindEvaluatorTests
     [Test]
     public void Test_DifferentLengths_ShouldThrowArgumentException()
     {
-        var secret = new[] { "red", "blue", "green" };
-        var guess = new[] { "red", "blue" };
-        var ex = Assert.Throws<ArgumentException>(() => MastermindEvaluator.Evaluate(secret, guess));
+        string[] secret = [ "red", "blue", "green" ];
+        string[] guess = [ "red", "blue" ];
+        var ex = Assert.Throws<ArgumentException>(() => Evaluate(secret, guess));
         Assert.That(ex.Message, Is.EqualTo("Secret and guess must have the same number of elements."));
     }
 }

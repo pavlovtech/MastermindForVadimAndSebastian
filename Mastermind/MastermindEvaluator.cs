@@ -13,8 +13,8 @@ public static class MastermindEvaluator
         int misplaced = 0;
         
         // This remaining secrets and guesses will be used to find misplaced colors
-        List<string> remainingSecret = [];
-        List<string> remainingGuess = [];
+        List<string> remainingSecrets = [];
+        List<string> remainingGuesses = [];
 
         // Find all guessed colors
         for (int i = 0; i < secret.Count; i++)
@@ -25,18 +25,18 @@ public static class MastermindEvaluator
             }
             else
             {
-                remainingGuess.Add(guess[i]);
-                remainingSecret.Add(secret[i]);
+                remainingGuesses.Add(guess[i]);
+                remainingSecrets.Add(secret[i]);
             }
         }
 
         // Check for misplaced colors
-        foreach (var color in remainingGuess)
+        foreach (var color in remainingGuesses)
         {
-            if (remainingSecret.Contains(color))
+            if (remainingSecrets.Contains(color))
             {
                 misplaced++;
-                remainingSecret.Remove(color); // Remove to avoid counting the same color twice
+                remainingSecrets.Remove(color); // Remove to avoid counting the same color twice
             }
         }
 

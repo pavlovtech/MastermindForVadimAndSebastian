@@ -28,10 +28,8 @@ while (true)
             Console.WriteLine("Congratulations! You've guessed the right combination!");
             break;
         }
-        else
-        {
-            Console.WriteLine($"{wellPlaced} well-placed, {misplaced} misplaced. Try again.");
-        }
+
+        Console.WriteLine($"{wellPlaced} well-placed, {misplaced} misplaced. Try again.");
     }
     catch (ArgumentException ex)
     {
