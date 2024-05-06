@@ -13,5 +13,5 @@ Tests:
 
 | Project                                   | Description                                                                       |
 |-------------------------------------------|-----------------------------------------------------------------------------------|
-| Task solution with console app            | Library for web scraping                                                          |
+| Mastermind            | Task solution with console app            | Library for web scraping                                                   |
 | Mastermind.UnitTests                      | NUnit project with unit tests                                                     |
